@@ -19,7 +19,7 @@ section {
     margin: 5vh 0;
 }
 
-#exo1 {
+.active {
     background-color: #007BFF;
     color: white;
 }
