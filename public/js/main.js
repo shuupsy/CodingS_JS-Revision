@@ -14,7 +14,7 @@ let exo2 = document.getElementById("exo2")
 exos.forEach(element => {
     element.addEventListener("click", ()=> {
         let x = document.querySelector(".active")
-        x.setAttribute("class","")
+        x.setAttribute("class","exo")
         element.classList.add("active")
     })
 });
