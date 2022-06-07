@@ -17,23 +17,23 @@ if (exo1.classList.contains("active")) {
 }
 
 // Exo2: Active + Display
-navItem.forEach((element, index) => {
-    element.addEventListener("click", () => {
-        // Réinitialisation
-        let x = document.querySelector(".active")
-        x.setAttribute("class", "nav-item")
-        // La navItem cliquée reprend les propriétés "active" du CSS
-        element.classList.add("active")
-        // Display none pour tous les contenus
-        contenu.forEach(d => {
-            d.style.display = "none"
-        })
-        // Affichage de l'exercice selectionné
-        if (element.classList.contains("active")) {
-            contenu[index].style.display = "block"
-        }
-    })
-})
+// navItem.forEach((element, index) => {
+//     element.addEventListener("click", () => {
+//         // Réinitialisation
+//         let x = document.querySelector(".active")
+//         x.setAttribute("class", "nav-item")
+//         // La navItem cliquée reprend les propriétés "active" du CSS
+//         element.classList.add("active")
+//         // Display none pour tous les contenus
+//         contenu.forEach(d => {
+//             d.style.display = "none"
+//         })
+//         // Affichage de l'exercice selectionné
+//         if (element.classList.contains("active")) {
+//             contenu[index].style.display = "block"
+//         }
+//     })
+// })
 
 // Exo3
 let input = document.querySelector("input")

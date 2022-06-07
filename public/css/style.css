@@ -9,19 +9,13 @@ body {
     width: 80%;
 }
 
-header {
+header, .active {
     background-color: #007BFF;
     color: white;
-    text-align: center;
 }
 
 section {
     margin: 5vh 0;
-}
-
-.active {
-    background-color: #007BFF;
-    color: white;
 }
 
 .nav {
@@ -42,7 +36,41 @@ section {
     padding: 8vh 5vh;
 }
 
+/* Exo3 */
 button, input {
     padding: 0 5px;
     border: none;
+}
+
+/* Exo4 */
+.div4 button {
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    margin: 1vh;
+}
+
+.rectangle {
+    display: flex;
+    justify-content: space-between;
+    gap: 23vh;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.rectangle1, .rectangle2 {
+    background-color: #007BFF;
+    height: 23vh;
+    width: 100%;
+}
+
+.rectangle1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    width: 50px;
+    height: 50px;
+    background-color: #DC3545;
 }
