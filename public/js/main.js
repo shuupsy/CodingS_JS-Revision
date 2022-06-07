@@ -28,35 +28,20 @@ if (exo1.classList.contains("active")) {
     titre.classList.add("bg-success")
 }
 
-// Exo2
-if (exo2.classList.contains("active")) {
-    // Rajout de la class"on"
-    div2.classList.add("on")
-}
-
-// exoContenu.forEach(d => {
-//     d.style.display = "none"
-//     if (d.classList.contains("on")) {
-//         d.style.display = "block"
-//         console.log(d)
-//     }
-// })
-
-// Active
-console.log
+// Exo2: Active + Display
 navItem.forEach((element, index) => {
     element.addEventListener("click", () => {
         // La couleur de la nav change à chaque clic
         let x = document.querySelector(".active")
         x.setAttribute("class", "nav-item")
         element.classList.add("active")
-        // Suppression de la classe "on" si elle existe
+        // Display none pour tous les contenus
         contenu.forEach(d => {
-            d.classList.remove("on")
+            d.style.display = "none"
         })
-        // Rajout d'une classe "on" pour la div correspondante
+        // Affichage de l'exercice selectionné
         if (element.classList.contains("active")) {
-            contenu[index].classList.toggle("on")
+            contenu[index].style.display = "block"
         }
     })
-});
+})
