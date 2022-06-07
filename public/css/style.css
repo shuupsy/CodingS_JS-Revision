@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto !important;
+    width: 80%;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+}
+
+section {
+    margin: 5vh 0;
+}
+
+#exo1 {
+    background-color: #007BFF;
+    color: white;
+}
+
+.nav {
+    color: #007BFF;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%,1fr));
+    gap: 5px;
+}
+
+.nav p {
+    width: 24%;
+    padding: 0 5px;
+    margin: 0;
+}
+
+.contenu {
+    background-color: #BDBEBE;
+    padding: 8vh 5vh;
+}
