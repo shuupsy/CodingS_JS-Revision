@@ -31,9 +31,10 @@ if (exo1.classList.contains("active")) {
 // Exo2: Active + Display
 navItem.forEach((element, index) => {
     element.addEventListener("click", () => {
-        // La couleur de la nav change à chaque clic
+        // Réinitialisation
         let x = document.querySelector(".active")
         x.setAttribute("class", "nav-item")
+        // La navItem cliquée reprend les propriétés "active" du CSS
         element.classList.add("active")
         // Display none pour tous les contenus
         contenu.forEach(d => {
@@ -44,4 +45,27 @@ navItem.forEach((element, index) => {
             contenu[index].style.display = "block"
         }
     })
+})
+
+// Exo3
+let input = document.querySelector("input")
+let btn = document.querySelector("button")
+let nom = document.querySelector("span")
+
+function Exo3() {
+    if (input.value == "") {
+        nom.innerText = "Inconnu"
+        input.value = ""
+    } else {
+        nom.innerText = input.value
+        input.value = ""
+    }
+}
+// Clic sur le bouton
+btn.addEventListener("click", Exo3)
+// Touche enter via input
+input.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        Exo3()
+    }
 })
