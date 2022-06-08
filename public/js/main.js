@@ -21,23 +21,23 @@ if (exo1.classList.contains("active")) {
 }
 
 // Exo2: Active + Display
-// navItem.forEach((element, index) => {
-//     element.addEventListener("click", () => {
-//         // Réinitialisation
-//         let x = document.querySelector(".active")
-//         x.setAttribute("class", "nav-item")
-//         // La navItem cliquée reprend les propriétés "active" du CSS
-//         element.classList.add("active")
-//         contenu.forEach(d => {
-//             // Display none pour tous les contenus
-//             d.style.display = "none"
-//             // Affichage de l'exercice selectionné
-//             if (element.classList.contains("active")) {
-//                 contenu[index].style.display = "block"
-//             }
-//         })
-//     })
-// })
+navItem.forEach((element, index) => {
+    element.addEventListener("click", () => {
+        // Réinitialisation
+        let x = document.querySelector(".active")
+        x.setAttribute("class", "nav-item")
+        // La navItem cliquée reprend les propriétés "active" du CSS
+        element.classList.add("active")
+        contenu.forEach(d => {
+            // Display none pour tous les contenus
+            d.style.display = "none"
+            // Affichage de l'exercice selectionné
+            if (element.classList.contains("active")) {
+                contenu[index].style.display = "block"
+            }
+        })
+    })
+})
 
 // Exo3 : formulaire
 let input = document.querySelector("input")
@@ -105,7 +105,7 @@ let x = document.querySelectorAll(".calc")[0]
 let y = document.querySelectorAll(".calc")[1]
 let equal1 = document.querySelectorAll(".equal")[0]
 let rep1 = document.getElementById("response")
-
+// Touche ENTER
 equal1.addEventListener("click", calc1)
 x.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
