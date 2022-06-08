@@ -103,17 +103,59 @@ btn5.addEventListener("click", () => {
 // Niveau1
 let x = document.querySelectorAll(".calc")[0]
 let y = document.querySelectorAll(".calc")[1]
-let equal = document.querySelectorAll(".equal")[0]
+let equal1 = document.querySelectorAll(".equal")[0]
 let rep1 = document.getElementById("response")
 
-equal.addEventListener("click", calc1)
+equal1.addEventListener("click", calc1)
+x.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        calc1()
+    }
+})
 y.addEventListener("keypress", (event) => {
     if (event.key === "Enter") {
         calc1()
     }
 })
+
 function calc1() {
     rep1.innerText = +(x.value) + +(y.value)
 }
 
 // Niveau2
+let screen = document.querySelector(".screen")
+let t = document.querySelectorAll(".coca")
+
+t.forEach(element => {
+    element.addEventListener("click", () => {
+        switch (element.innerHTML) {
+            // Display les touches cliquées sur l'écran
+            case "+": screen.innerText += "+"; break;
+            case "-": screen.innerText += "-"; break;
+            case "*": screen.innerText += "*"; break;
+            case "/": screen.innerText += "/"; break;
+            case "0": screen.innerText += "0"; break;
+            case "1": screen.innerText += "1"; break;
+            case "2": screen.innerText += "2"; break;
+            case "3": screen.innerText += "3"; break;
+            case "4": screen.innerText += "4"; break;
+            case "5": screen.innerText += "5"; break;
+            case "6": screen.innerText += "6"; break;
+            case "7": screen.innerText += "7"; break;
+            case "8": screen.innerText += "8"; break;
+            case "9": screen.innerText += "9"; break;
+        }
+        // Argument en entier
+        let z = screen.innerText
+        // Egal
+        let equal2 = document.querySelectorAll(".equal")[1]
+        equal2.addEventListener("click", () => {
+            screen.innerText = eval(z)
+        })  
+    })
+})
+// Effacer la fenêtre
+let clear = document.querySelector(".clear")
+clear.addEventListener("click", () => {
+    screen.innerText = ""
+})

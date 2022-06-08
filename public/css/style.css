@@ -118,7 +118,7 @@ img {
 .touches {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
@@ -128,3 +128,4 @@ img {
     width: 30px;
     height: 30px;
 }
+
