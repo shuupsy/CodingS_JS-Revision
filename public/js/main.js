@@ -4,10 +4,10 @@ let navItem = document.querySelectorAll(".nav-item")
 
 // Contenu de départ
 let contenu = document.querySelectorAll(".exo")
-// contenu.forEach(d => {
-//     d.style.display = "none"
-// })
-// contenu[0].style.display = "block"
+contenu.forEach(d => {
+    d.style.display = "none"
+})
+contenu[0].style.display = "block"
 
 // Exo1
 let exo1 = document.getElementById("exo1")
