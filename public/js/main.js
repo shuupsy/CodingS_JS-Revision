@@ -4,10 +4,10 @@ let navItem = document.querySelectorAll(".nav-item")
 
 // Contenu de départ
 let contenu = document.querySelectorAll(".exo")
-contenu.forEach(d => {
-    d.style.display = "none"
-})
-contenu[0].style.display = "block"
+// contenu.forEach(d => {
+//     d.style.display = "none"
+// })
+// contenu[0].style.display = "block"
 
 // Exo1
 let exo1 = document.getElementById("exo1")
@@ -21,23 +21,23 @@ if (exo1.classList.contains("active")) {
 }
 
 // Exo2: Active + Display
-navItem.forEach((element, index) => {
-    element.addEventListener("click", () => {
-        // Réinitialisation
-        let x = document.querySelector(".active")
-        x.setAttribute("class", "nav-item")
-        // La navItem cliquée reprend les propriétés "active" du CSS
-        element.classList.add("active")
-        contenu.forEach(d => {
-            // Display none pour tous les contenus
-            d.style.display = "none"
-            // Affichage de l'exercice selectionné
-            if (element.classList.contains("active")) {
-                contenu[index].style.display = "block"
-            }
-        })
-    })
-})
+// navItem.forEach((element, index) => {
+//     element.addEventListener("click", () => {
+//         // Réinitialisation
+//         let x = document.querySelector(".active")
+//         x.setAttribute("class", "nav-item")
+//         // La navItem cliquée reprend les propriétés "active" du CSS
+//         element.classList.add("active")
+//         contenu.forEach(d => {
+//             // Display none pour tous les contenus
+//             d.style.display = "none"
+//             // Affichage de l'exercice selectionné
+//             if (element.classList.contains("active")) {
+//                 contenu[index].style.display = "block"
+//             }
+//         })
+//     })
+// })
 
 // Exo3 : formulaire
 let input = document.querySelector("input")
@@ -100,6 +100,7 @@ btn5.addEventListener("click", () => {
 })
 
 // Exo6 : Calculatrice
+// Niveau1
 let x = document.querySelectorAll(".calc")[0]
 let y = document.querySelectorAll(".calc")[1]
 let equal = document.querySelectorAll(".equal")[0]
@@ -111,7 +112,8 @@ y.addEventListener("keypress", (event) => {
         calc1()
     }
 })
-
 function calc1() {
     rep1.innerText = +(x.value) + +(y.value)
 }
+
+// Niveau2
