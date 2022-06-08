@@ -35,7 +35,7 @@ if (exo1.classList.contains("active")) {
 //     })
 // })
 
-// Exo3
+// Exo3 : formulaire
 let input = document.querySelector("input")
 let btn = document.querySelector("button")
 let nom = document.querySelector("span")
@@ -59,7 +59,7 @@ input.addEventListener("keypress", (event) => {
 })
 
 
-// Exo4 
+// Exo4 : déplacement carré rouge
 let btn4 = document.querySelectorAll("button")[1]
 let dispClick = document.querySelectorAll("span")[1]
 let click = 0
@@ -69,6 +69,7 @@ let rectangle2 = document.querySelector(".rectangle2")
 let rouge1 = rectangle1.childNodes[1]
 let rouge2 = rectangle2.childNodes[1]
 
+// Clic clic
 btn4.addEventListener("click", () => {
     if (rouge1.classList.contains("red")) {
         rouge2.classList.add("red")
@@ -81,3 +82,6 @@ btn4.addEventListener("click", () => {
     click += 1;
     dispClick.innerHTML = click;
 })
+
+
+// Exo5 : oeufs
