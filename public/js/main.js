@@ -3,7 +3,7 @@ let nav = document.querySelector(".nav")
 let navItem = document.querySelectorAll(".nav-item")
 
 // Contenus
-let contenu = document.querySelectorAll("div")
+let contenu = document.querySelectorAll(".exo")
 
 // Exo1
 let exo1 = document.getElementById("exo1")
@@ -17,23 +17,23 @@ if (exo1.classList.contains("active")) {
 }
 
 // Exo2: Active + Display
-// navItem.forEach((element, index) => {
-//     element.addEventListener("click", () => {
-//         // Réinitialisation
-//         let x = document.querySelector(".active")
-//         x.setAttribute("class", "nav-item")
-//         // La navItem cliquée reprend les propriétés "active" du CSS
-//         element.classList.add("active")
-//         // Display none pour tous les contenus
-//         contenu.forEach(d => {
-//             d.style.display = "none"
-//         })
-//         // Affichage de l'exercice selectionné
-//         if (element.classList.contains("active")) {
-//             contenu[index].style.display = "block"
-//         }
-//     })
-// })
+navItem.forEach((element, index) => {
+    element.addEventListener("click", () => {
+        // Réinitialisation
+        let x = document.querySelector(".active")
+        x.setAttribute("class", "nav-item")
+        // La navItem cliquée reprend les propriétés "active" du CSS
+        element.classList.add("active")
+        // Display none pour tous les contenus
+        contenu.forEach(d => {
+            d.style.display = "none"
+        })
+        // Affichage de l'exercice selectionné
+        if (element.classList.contains("active")) {
+            contenu[index].style.display = "block"
+        }
+    })
+})
 
 // Exo3 : formulaire
 let input = document.querySelector("input")
@@ -85,3 +85,15 @@ btn4.addEventListener("click", () => {
 
 
 // Exo5 : oeufs
+let btn5 = document.querySelectorAll("button")[3]
+let boite = document.querySelector(".boite")
+
+btn5.addEventListener("click", () => {
+    let oeuf = document.createElement("img")
+    oeuf.setAttribute("src", "public/img/oeuf.png")
+    oeuf.setAttribute("alt", "oeuf cartoon")
+    boite.appendChild(oeuf)
+})
+
+// Exo6 : Calculatrice
+

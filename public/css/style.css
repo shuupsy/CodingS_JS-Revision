@@ -9,7 +9,8 @@ body {
     width: 80%;
 }
 
-header, .active {
+header,
+.active {
     background-color: #007BFF;
     color: white;
 }
@@ -20,9 +21,10 @@ section {
 
 .nav {
     color: #007BFF;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25%,1fr));
-    gap: 5px;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+    gap: 13px;
 }
 
 .nav p {
@@ -37,14 +39,16 @@ section {
 }
 
 /* Exo3 */
-button, input {
+button,
+input {
     padding: 0 5px;
     border: none;
 }
 
 /* Exo4 */
-.div4 button {
-    padding: 0.5rem 1rem;
+.exo:nth-child(4) button,
+.exo:nth-child(5) button {
+    padding: 0.5rem 0.8rem;
     border-radius: 5px;
     margin: 1vh;
 }
@@ -57,13 +61,15 @@ button, input {
     margin-bottom: 5vh;
 }
 
-.rectangle1, .rectangle2 {
+.rectangle1,
+.rectangle2 {
     background-color: #007BFF;
     height: 23vh;
     width: 100%;
 }
 
-.rectangle1, .rectangle2 {
+.rectangle1,
+.rectangle2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,4 +79,16 @@ button, input {
     width: 50px;
     height: 50px;
     background-color: #DC3545;
+}
+
+
+/* Exo5 */
+.boite {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+img {
+    width: 10%;
 }
