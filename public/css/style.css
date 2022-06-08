@@ -92,3 +92,19 @@ input {
 img {
     width: 10%;
 }
+
+/* Exo6 */
+
+.level1 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.level1 input {
+    width: 20vh;
+}
+
+.level1 p {
+    margin: 0;
+}
+

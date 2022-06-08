@@ -2,8 +2,12 @@
 let nav = document.querySelector(".nav")
 let navItem = document.querySelectorAll(".nav-item")
 
-// Contenus
+// Contenu de départ
 let contenu = document.querySelectorAll(".exo")
+contenu.forEach(d => {
+    d.style.display = "none"
+})
+contenu[0].style.display = "block"
 
 // Exo1
 let exo1 = document.getElementById("exo1")
@@ -24,14 +28,14 @@ navItem.forEach((element, index) => {
         x.setAttribute("class", "nav-item")
         // La navItem cliquée reprend les propriétés "active" du CSS
         element.classList.add("active")
-        // Display none pour tous les contenus
         contenu.forEach(d => {
+            // Display none pour tous les contenus
             d.style.display = "none"
+            // Affichage de l'exercice selectionné
+            if (element.classList.contains("active")) {
+                contenu[index].style.display = "block"
+            }
         })
-        // Affichage de l'exercice selectionné
-        if (element.classList.contains("active")) {
-            contenu[index].style.display = "block"
-        }
     })
 })
 
@@ -96,4 +100,18 @@ btn5.addEventListener("click", () => {
 })
 
 // Exo6 : Calculatrice
+let x = document.querySelectorAll(".calc")[0]
+let y = document.querySelectorAll(".calc")[1]
+let equal = document.querySelectorAll(".equal")[0]
+let rep1 = document.getElementById("response")
 
+equal.addEventListener("click", calc1)
+y.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        calc1()
+    }
+})
+
+function calc1() {
+    rep1.innerText = +(x.value) + +(y.value)
+}
